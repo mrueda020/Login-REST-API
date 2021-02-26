@@ -5,7 +5,7 @@ const conn = mysql.createPool({
   host: "localhost",
   user: "root",
   password: "",
-  database: "examen5",
+  database: "users",
 });
 conn.query = promisify(conn.query);
 module.exports = conn;

@@ -1,23 +1,9 @@
 const sql = require("../config/db");
 
 async function findByID(email) {
-  //   sql.query(`select * from evaluado where email = '${email}'`, (err, res) => {
-  //     if (err) {
-  //       result({ status: 500, message: "Error en el servidor" }, null);
-  //       return;
-  //     } else {
-  //       if (res.length) {
-  //         result(null, res[0]);
-  //         return;
-  //       }
-  //       result({ status: 404, message: "Usuario no encontrado" }, null);
-  //       return;
-  //     }
-  //   });
-
   try {
     const result = await sql.query(
-      `selet * from evaluado where email = '${email}'`
+      `select * from users where email = '${email}'`
     );
 
     if (!result.length) {
